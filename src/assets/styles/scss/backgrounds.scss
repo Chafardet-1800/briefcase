@@ -54,6 +54,19 @@
   background: $v-secondary-selected;
 }
 
+// tertiary
+.cmm-bg-tertiary {
+  background: $v-tertiary;
+}
+
+.cmm-bg-tertiary-disabled {
+  background: $v-tertiary-disabled;
+}
+
+.cmm-bg-tertiary-selected {
+  background: $v-tertiary-selected;
+}
+
 // Primary
 .cmm-bg-gradient {
   background: $v-gradient;

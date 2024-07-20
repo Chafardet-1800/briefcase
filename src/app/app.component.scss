@@ -1,0 +1,7 @@
+@import "../assets/styles/scss/variables.scss";
+#shadow_hover{
+  width: 1px;
+  height: 1px;
+  box-shadow: 0px 0px 300px 35px $v-primary !important;
+  position: absolute;
+}

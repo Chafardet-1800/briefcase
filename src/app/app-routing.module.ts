@@ -5,19 +5,13 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-      },
-      {
-        path: 'home',
-        loadChildren: () =>
-          import('./modules/profile-view/profile-view.module').then((m) => m.ProfileViewModule),
-      }
-    ],
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./modules/profile-view/profile-view.module').then((m) => m.ProfileViewModule),
   },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

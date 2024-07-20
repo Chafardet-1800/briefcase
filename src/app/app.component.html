@@ -1,25 +1,19 @@
-<div class="container-full">
+<div class="vh-100 vw-100 cmm-bg-background-page">
+
+  <!-- Sombra del mouse -->
+  <div id="shadow_hover"></div>
 
   <!-- Navbar -->
 
-  <!-- Container -->
-  <mat-drawer-container class="position-relative">
+  <!-- Contenedor del componente de la vista -->
+  <main>
 
-    <!-- Container and Footer -->
-    <mat-drawer-content>
+    <!-- Area para colocar el componente correspondiente segun la ruta -->
+    <router-outlet></router-outlet>
 
-      <!-- Contenedor del componente de la vista -->
-      <div id="page-container" class="overflow-hidden" style="min-height: 87vh;">
+  </main>
 
-        <!-- Area para colocar el componente correspondiente segun la ruta -->
-        <router-outlet></router-outlet>
+  <!-- Footer -->
 
-      </div>
-
-      <!-- Footer -->
-
-    </mat-drawer-content>
-
-  </mat-drawer-container>
 
 </div>
