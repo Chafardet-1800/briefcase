@@ -1,0 +1,32 @@
+<section class="d-flex flex-wrap w-100 p-3">
+
+  <!-- Linea de tiempo -->
+  <div class="w-100 d-flex justify-content-between position-relative my-3">
+
+    <div class="cmm-bg-primary position-absolute w-100" style="height: 3px; top: 50%; transform: translateY(-50%);"></div>
+
+    <div *ngFor="let timeline of timelineList" (click)="timelineSelected = timeline">
+      <p class="m-0 cmm-bg-black position-relative px-2">{{timeline.date}}</p>
+    </div>
+
+  </div>
+
+  <!-- Nombre de la empresa y cargo ocupado -->
+  <div class="col-12 col-lg-6 d-flex flex-column">
+
+    <!-- Nombre de la empresa -->
+    <p>{{timelineSelected.event}}</p>
+
+    <!-- Cargo ocupado -->
+    <p>{{timelineSelected.subEvent}}</p>
+
+  </div>
+
+  <!-- Descripcion -->
+  <div class="col-12 col-lg-6 d-flex flex-column">
+
+    <p>{{timelineSelected.description}}</p>
+
+  </div>
+
+</section>

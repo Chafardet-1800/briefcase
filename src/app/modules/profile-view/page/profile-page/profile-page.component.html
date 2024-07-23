@@ -1,6 +1,46 @@
-<p class="w-100 text-center">profile-page works!</p>
+<div class="d-flex gap-3">
+  <div class="rounded-circle cmm-bg-primary" style="aspect-ratio: 1/1; width: 20px;"></div>
+  <div class="rounded-circle cmm-bg-secondary" style="aspect-ratio: 1/1; width: 20px;"></div>
+  <div class="rounded-circle cmm-bg-tertiary" style="aspect-ratio: 1/1; width: 20px;"></div>
+</div>
 
+<!-- Quien soy -->
+<section class="d-flex flex-wrap">
 
-<div class="rounded-circle cmm-bg-primary" style="aspect-ratio: 1/1; width: 200px;"></div>
-<div class="rounded-circle cmm-bg-secondary" style="aspect-ratio: 1/1; width: 200px;"></div>
-<div class="rounded-circle cmm-bg-tertiary" style="aspect-ratio: 1/1; width: 200px;"></div>
+  <!-- Persona -->
+  <div class="col-12 col-lg-6 p-3 d-flex flex-column">
+
+    <h1>Anibal Chafardet</h1>
+    <p>Programador Frontend</p>
+
+  </div>
+
+  <!-- Descripcion -->
+  <div class="col-12 col-lg-6 p-3 d-flex flex-column">
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Totam, possimus reiciendis impedit beatae fugiat laborum
+      libero cupiditate doloribus numquam sequi voluptatem quasi
+      quam voluptates assumenda voluptatum dolores.
+      Perspiciatis, accusamus unde?
+    </p>
+
+  </div>
+
+  <!-- Carrusel de lenguajes -->
+  <div class="w-100 d-flex justify-content-around gap-3" style="overflow: auto;">
+
+    <div *ngFor="let skill of skillsList">
+      <p>{{skill.name}}</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Carrusell de mis proyectos -->
+<cmp-project-carrusell></cmp-project-carrusell>
+
+<!-- linea de timepo -->
+<cmp-timeline></cmp-timeline>

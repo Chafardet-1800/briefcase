@@ -4,15 +4,15 @@
 
 
 // Paleta de colores del proyecto
-$v-primary: #336ab2;
-$v-primary-disabled: #7b96ba;
-$v-primary-selected: #7846fc;
-$v-secondary: #c26ca9;
-$v-secondary-disabled: #c094b3;
-$v-secondary-selected: #ac5694;
-$v-tertiary: #f3954d;
-$v-tertiary-disabled: #edb081;
-$v-tertiary-selected: #f47b1f;
+$v-primary: #7c44b7;
+$v-primary-disabled: #ac5eff;
+$v-primary-selected: #534563;
+$v-secondary: #68B844;
+$v-secondary-disabled: #90ff5e;
+$v-secondary-selected: #3c6b27;
+$v-tertiary: #B8B744;
+$v-tertiary-disabled: #fffd5e;
+$v-tertiary-selected: #6b6a27;
 $v-gradient: linear-gradient(90deg, rgba(194, 108, 169, 1) 0%, rgba(51, 106, 178, 1) 100%);
 $v-gradient-selected: linear-gradient(90deg, rgba(194, 108, 169, 1) 0%, rgba(51, 106, 178, 1) 38%);
 $v-gradient-secondary: linear-gradient(90deg, rgba(194, 108, 169, 1) 0%, rgb(243, 149, 77) 49%, rgba(244, 150, 75, 1) 50%, rgba(232, 147, 81, 1) 59%, rgba(51, 106, 178, 1) 100%);
@@ -20,40 +20,40 @@ $v-gradient-tertiary: linear-gradient(90deg, rgb(243, 149, 77) 0%, rgba(244, 150
 
 
 // Notificaciones
-$v-success: #336ab2;
-$v-error: #f6566e;
-$v-warning: #fdc713;
-$v-info: #03a9f4;
+$v-success: #7c44b7;
+$v-error: #e6005c;
+$v-warning: #B8B744;
+$v-info: #444BB8;
 
 // Textos
-$v-txt: #28285B;
-$v-back-txt: #434362;
-$v-title-txt: #404070;
+$v-txt: #ffffff;
+$v-back-txt: #f6f6f6;
+$v-title-txt: #ffffff;
 
 // Fondos
-$v-background-page: #ffffff;
-$v-menu: #ffffff;
-$v-navbar: #444444;
+$v-background-page: #0e0d1a;
+$v-menu: #0e0d1a;
+$v-navbar: #0e0d1a;
 
 // Colores neutros de uso especifico
 $v-white: #ffffff;
 $v-light-white: #f6f6f6;
-$v-black: #000000;
+$v-black: #0e0d1a;
 $v-dark-gray: #595959;
 $v-medium-gray: #a09f9f;
 $v-light-gray: #cccaca;
 
 // Seteo este color como una variable para que pueda ser seteado de forma dinámica
-$dynamic_border_radios_button: 20px;
+$dynamic_border_radios_button: 10px;
 
 // Seteo este color como una variable para que pueda ser seteado de forma dinámica
-$dynamic_border_radius: 20px;
+$dynamic_border_radius: 10px;
 
 // Creo variables que puedan ser modificadas en JS
 :root {
 
   // Variable que indica el color principal al seleccionar
-  --v-dynamic-primary: #336ab2;
+  --v-dynamic-primary: #7c44b7;
 
   // Variable que indoca el color principal al estar seleccionado
   --v-dynamic-primary-selected: #2e5f9e;
