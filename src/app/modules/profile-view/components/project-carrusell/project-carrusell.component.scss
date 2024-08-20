@@ -56,7 +56,6 @@
 .cards {
   list-style: none;
   white-space: nowrap;
-  max-width: calc(var(--cover-size) * 6);
   overflow: scroll;
 
   --size: 6;
@@ -65,7 +64,7 @@
   margin: 0 auto;
   padding: calc(var(--cover-size) / 3* 2) 0;
   position: relative;
-  max-width: 90vw;
+  max-width: 100vw;
 
   /*To always have one album cover centered, CSS Scroll Snapping is used.*/
   scroll-snap-type: x mandatory;
@@ -101,7 +100,7 @@
 
   position: relative;
   z-index: 1;
-  will-change: z-index;
+  // will-change: z-index;
 
   user-select: none;
 }
@@ -127,7 +126,7 @@
   /* Prevent FOUC */
   transform: translateX(-100%) rotateY(-45deg);
 
-  will-change: transform;
+  // will-change: transform;
 
   /*The album reflections*/
   -webkit-box-reflect: below 0.5em linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.25));

@@ -1,0 +1,166 @@
+@import "../../../../assets/styles/scss/variables.scss";
+
+// Animacion para el alto del encabezado
+@keyframes sticky-parallax-header-move-and-size {
+  from {
+    height: 100vh;
+  }
+
+  to {
+    height: 10vh;
+    background-color: $v-background-page;
+  }
+}
+
+// Animacion para el titulo
+@keyframes title-move {
+  from {
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 4rem;
+  }
+
+  to {
+    transform: translateX(0%);
+    left: 0%;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+// Animacion para el titulo de trabajo y los lenguajes
+@keyframes title-opened-move {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+// Animacion para el contenedor de la descripcion
+@keyframes nav-opened-move {
+  from {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(0px, -100%);
+    opacity: 0;
+  }
+}
+
+// Animacion para el contenedor de los links
+@keyframes nav-closed-move {
+  from {
+    transform: translate(0px, 100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
+}
+
+// Contenedor principal (nav)
+#sticky-parallax-header {
+
+  // Estilos para la animacion
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  animation: sticky-parallax-header-move-and-size linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0vh 90vh;
+
+  // Estilos para diseño
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: start;
+  background-image: url('../../../../assets/images/media/fondo_lineas.svg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-blend-mode: soft-light;
+  z-index: 100;
+}
+
+// Titulo
+.title-name {
+  width: fit-content;
+  position: relative;
+
+  animation: title-move linear forwards;
+  animation-timeline: scroll(root);
+  animation-range: 0vh 90vh;
+}
+
+.info-container {
+  animation: title-opened-move linear forwards;
+  animation-timeline: scroll(root);
+  animation-range: 0vh 90vh;
+}
+
+.title-job {
+  font-size: 2rem;
+  width: fit-content;
+  position: relative;
+  transform: translateX(-82%);
+  left: 50%;
+}
+
+.skills-array {
+  position: relative;
+  transform: translateX(-40%);
+  left: 50%;
+}
+
+// Contendero de la descripcion y los links
+.grid-options-container {
+
+  position: relative;
+  overflow: hidden;
+  display: grid;
+
+  // Estilos comunes para los contenedores
+  div {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    transition: all .5s;
+  }
+
+}
+
+// Contenedor de mi descripcion
+div.description {
+  animation: nav-opened-move linear forwards;
+  animation-timeline: scroll(root);
+  animation-range:  0vh 90vh;
+}
+
+// Contenedor de los links
+div.links-container {
+  animation: nav-closed-move linear forwards;
+  animation-timeline: scroll(root);
+  animation-range:  0vh 90vh;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  box-shadow: inset 0 0 0 0 $v-primary !important;
+  color: $v-primary;
+  padding: 0 .25rem;
+  margin: 0 2rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.link:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 $v-primary !important;
+}

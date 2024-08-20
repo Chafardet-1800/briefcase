@@ -3,3 +3,13 @@
 @import "assets/styles/scss/text.scss";
 @import "assets/styles/scss/variables.scss";
 @import "assets/styles/scss/effects.scss";
+
+html{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: $v-background-page;
+  padding-top: 100vh;
+}

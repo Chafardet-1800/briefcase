@@ -1,0 +1,73 @@
+<nav id="sticky-parallax-header">
+
+  <!-- Contenedor que limita el tamaño del encabezado -->
+  <div class="d-flex position-relative ">
+
+    <!-- Listado -->
+    <div class="row my-auto">
+
+      <!-- Nombre, titulo y skills -->
+      <div class="d-flex flex-column col-12 col-md-6 px-3">
+
+        <!-- Nombre -->
+        <p class="title-name m-0">Anibal A. Chafardet</p>
+
+        <!-- Contenedor de la informacion -->
+        <div class="info-container pe-4">
+
+          <!-- Titulo -->
+          <p class="title-job">
+            Programador Frontend
+          </p>
+
+          <!-- Skills -->
+          <div class="d-flex flex-wrap skills-array">
+
+            <p class="col-12 fs-18">
+              Tecnologias que manejo:
+            </p>
+
+            <div class="w-100 overflow-auto d-flex gap-3">
+
+              <img *ngFor="let skill of skillsArray" style="width: 100px;"
+              [src]="skill.imgurl" [alt]="skill.name" [matTooltip]="skill.name">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Descripcion y links -->
+      <div class="col-md-6 grid-options-container">
+
+        <!-- Contenedor de la descripcion -->
+        <div class="description d-flex align-items-center justify-content-center">
+          <p class="m-0 px-5 fs-18">
+            Se utilizar correctamente varias lenguajes de programacion y siempre estoy dispuesto a aprender mas. Tengo experiencia tanto en el desarrollo frontend como en el backend, aunque me he dedicado mas al primero. Entre al mundo de la programacion porque me gusta aprender cosas nuevas y en el codigo e descubierto que siempre hay algo nuevo que aprender.
+            <br>
+            <br>
+            Considero que no hay mejor forma para aprender que haciendo el codigo, por esto mismo me he desenpeñado en diversas areas y labores que, en mi opinion, me han dado una vista bastante amplia de lo que es la programacion y el desarrollo de productos digitales.
+          </p>
+        </div>
+
+        <!-- Contenedor de los links -->
+        <div class="links-container pt-4">
+
+          <a href="#" class="link">Proyectos</a>
+
+          <a href="#" class="link">Experiencia</a>
+
+          <a href="#" class="link">Contacto</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
