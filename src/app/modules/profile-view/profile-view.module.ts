@@ -4,6 +4,7 @@ import { ProfilePageComponent } from './page/profile-page/profile-page.component
 import { ProfileViewRountingModule } from './profile-view-rounting.module';
 import { ProjectCarrusellComponent } from './components/project-carrusell/project-carrusell.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 
 
@@ -11,7 +12,8 @@ import { TimelineComponent } from './components/timeline/timeline.component';
   declarations: [
     ProfilePageComponent,
     ProjectCarrusellComponent,
-    TimelineComponent
+    TimelineComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,34 @@
+@import "../../../../../assets/styles/scss/variables.scss";
+
+.alert {
+  padding: 1.2rem 1rem 1.2rem 0.5rem;
+}
+
+.bl-error {
+  border-left: 20px solid $v-error;
+}
+
+.bl-success {
+  border-left: 20px solid $v-success;
+}
+
+.bl-info {
+  border-left: 20px solid $v-info;
+}
+
+.bl-warning {
+  border-left: 20px solid $v-warning;
+}
+
+.closeButton {
+  border: none;
+  width: max-content;
+  height: 20px;
+  background-color: transparent;
+  align-self: center;
+}
+
+.closeButton > * {
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+}

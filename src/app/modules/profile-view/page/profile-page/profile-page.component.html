@@ -1,44 +1,9 @@
-<div class="d-flex gap-3">
-  <div class="rounded-circle cmm-bg-primary" style="aspect-ratio: 1/1; width: 20px;"></div>
-  <div class="rounded-circle cmm-bg-secondary" style="aspect-ratio: 1/1; width: 20px;"></div>
-  <div class="rounded-circle cmm-bg-tertiary" style="aspect-ratio: 1/1; width: 20px;"></div>
-</div>
-
-<!-- Quien soy -->
-<section class="d-none">
-<!-- <section class="d-flex flex-wrap"> -->
-
-  <!-- Persona -->
-  <div class="col-12 col-lg-6 p-3 d-flex flex-column">
-
-    <h1 class="title">Anibal Chafardet</h1>
-    <p>Programador Frontend</p>
-
-  </div>
-
-  <!-- Descripcion -->
-  <div class="col-12 col-lg-6 p-3 d-flex flex-column">
-
-    <p>
-       Se utilizar correctamente varias lenguajes de programacion y siempre estoy dispuesto a aprender mas. Tengo experiencia tanto en el desarrollo frontend como en el backend, aunque me he dedicado mas al primero. Entre al mundo de la programacion porque me gusta aprender cosas nuevas y en el codigo e descubierto que siempre hay algo nuevo que aprender.
-       Considero que no hay mejor forma para aprender que haciendo el codigo, por esto mismo me he desenpeñado en diversas areas y labores que, en mi opinion, me han dado una vista bastante amplia de lo que es la programacion y el desarrollo de productos digitales.
-    </p>
-
-  </div>
-
-  <!-- Carrusel de lenguajes -->
-  <div class="w-100 d-flex justify-content-around gap-3" style="overflow: auto;">
-
-    <div *ngFor="let skill of skillsList">
-      <p>{{skill.name}}</p>
-    </div>
-
-  </div>
-
-</section>
 
 <!-- Carrusell de mis proyectos -->
 <cmp-project-carrusell></cmp-project-carrusell>
 
 <!-- linea de timepo -->
 <cmp-timeline></cmp-timeline>
+
+<!-- Formulario de contacto -->
+<cmp-contact-form></cmp-contact-form>

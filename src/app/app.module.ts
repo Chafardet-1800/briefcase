@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { RouterModule } from '@angular/router';
-import { ScrollNavbarComponent } from './shared/components/scroll-navbar/scroll-navbar.component';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

@@ -13,7 +13,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/profile-view/profile-view.module').then((m) => m.ProfileViewModule),
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
