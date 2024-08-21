@@ -57,3 +57,6 @@ export const typescriptIcon =
 
 export const backgroundLines =
   'assets/images/media/fondo_lineas.svg';
+
+export const personalProfile =
+  'assets/images/media/perfil_personal.svg';

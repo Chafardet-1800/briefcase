@@ -14,6 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { CmmToastrComponent } from './components/dialogs/toastr/toastr.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CmmButtonComponent } from './components/buttons/button/button.component';
 
 
 
@@ -25,6 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CmmInputSelectComponent,
     CmmNumberFormatDirective,
     CmmAlphaNumericFormatDirective,
+    CmmButtonComponent,
     CmmToastrComponent
   ],
   imports: [
@@ -34,6 +37,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatAutocompleteModule,
     MatSelectModule,
     MatIconModule,
+    MatDialogModule,
     MatSnackBarModule,
     FormsModule
   ],
@@ -44,6 +48,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CmmInputSelectComponent,
     CmmNumberFormatDirective,
     CmmAlphaNumericFormatDirective,
+    CmmButtonComponent,
     CmmToastrComponent
   ]
 })

@@ -5,6 +5,9 @@ import { ProfileViewRountingModule } from './profile-view-rounting.module';
 import { ProjectCarrusellComponent } from './components/project-carrusell/project-carrusell.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from "../../shared/shared.module";
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -17,7 +20,11 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
   ],
   imports: [
     CommonModule,
-    ProfileViewRountingModule
+    ReactiveFormsModule,
+    ProfileViewRountingModule,
+    SharedModule,
+    MatInputModule,
+    FormsModule
   ]
 })
 export class ProfileViewModule { }

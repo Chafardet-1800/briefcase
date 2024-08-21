@@ -1,0 +1,34 @@
+<div class="d-flex flex-wrap px-4 my-5">
+
+  <div class="col-12 col-md-6 d-flex flex-column">
+
+    <p class="text-center fs-24">Si estas interesado en trabajar conmigo <br> no dudes en contactarme</p>
+
+    <img [src]="personalProfile" alt="concepto de perfil personal" class="w-80 mx-auto">
+
+  </div>
+
+  <form [formGroup]="componentForm" class="d-flex flex-column gap-2 col-12 col-md-6">
+
+    <!-- Nombre -->
+    <cmm-cmp-i-text class="col-12 px-2" formControlName="name" label="Nombre" ></cmm-cmp-i-text>
+
+    <!-- Email -->
+    <cmm-cmp-i-email class="col-12 px-2" formControlName="email" label="Email" ></cmm-cmp-i-email>
+
+    <!-- Asunto -->
+    <cmm-cmp-i-select class="col-12 px-2" formControlName="affair" selectMode="select"
+    label="Asunto" placeholder="" [optionsList]="selectList" optionKey="value"
+    optionName="value" ></cmm-cmp-i-select>
+
+    <!-- Descripcion del produto -->
+    <mat-form-field class="col-12 px-2" appearance="outline">
+      <mat-label>Mensaje</mat-label>
+      <textarea matInput formControlName="message" rows="4"></textarea>
+    </mat-form-field>
+
+    <cmm-cmp-b-button class="col-12 rounded" type="submit" button_text="Enviar"></cmm-cmp-b-button>
+
+  </form>
+
+</div>

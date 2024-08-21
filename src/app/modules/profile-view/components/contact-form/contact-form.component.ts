@@ -6,6 +6,7 @@ import { ProfileViewService } from '../../services/profile-view.service';
 import { CmmToastrComponent } from 'src/app/shared/components/dialogs/toastr/toastr.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CmmAlertModalModel } from 'src/app/shared/models/dialogs.model';
+import { personalProfile } from 'src/assets/images/images-routes';
 
 @Component({
   selector: 'cmp-contact-form',
@@ -13,6 +14,11 @@ import { CmmAlertModalModel } from 'src/app/shared/models/dialogs.model';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements CmmComponentFormModel {
+
+  /**
+   * Imagenes
+   */
+  personalProfile: string = personalProfile;
 
   //? Lógica de lifecicle
 
@@ -27,6 +33,18 @@ export class ContactFormComponent implements CmmComponentFormModel {
    * Formulario en el que se trabajará (Aplica si el form es de más de un input)
    */
   componentForm!: FormGroup;
+
+  //? Informacion util para el formulario
+
+  /**
+   * Listado de opciones para los posibles asuntos
+   */
+  selectList: any[] = [
+    {value: "Asunto 1"},
+    {value: "Asunto 2"},
+    {value: "Asunto 3"},
+  ]
+
 
   constructor(
     private profileViewService: ProfileViewService,
@@ -48,11 +66,10 @@ export class ContactFormComponent implements CmmComponentFormModel {
 
     // Creo el formulario con el constructor agregando los controles necesarios
     this.componentForm = this.fb.group({
+      name: ['', Validators.required],
       email: ['', Validators.required],
       affair: [''],
       message: ['', Validators.required],
-      description: ['', Validators.required],
-      brand: ['', Validators.required],
     });
 
   };
