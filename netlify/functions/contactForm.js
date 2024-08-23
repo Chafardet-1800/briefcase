@@ -85,6 +85,17 @@ exports.handler = async (event, context)=> {
       // Indicamos lo recivido
       console.log("RECIBÍ UNA SOLICITUD",params)
 
+      console.log("Datos para enviar", {
+            host: process.env.EMAIL_HOST,
+            port: 465,
+            secure: true,
+            auth: {
+              user: process.env.EMAIL_USER,
+              pass: process.env.EMAIL_PASSWORD,
+            },
+      });
+
+
       // Enviamos el email y retornamos el resultado
       return await sendEmail({
           from: process.env.EMAIL_USER,
