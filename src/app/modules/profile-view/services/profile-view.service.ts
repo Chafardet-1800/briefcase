@@ -8,13 +8,24 @@ import { Observable } from 'rxjs';
 
 export class ProfileViewService {
 
-  // constructor(private http: HttpClient) {}
+  /**
+   * Url Base del servicio
+   */
+  baseUrl: string;
 
-  // /**
-  //  * Servicio para enviar el email de contacto
-  //  */
-  // SendContactEmail(emailData: any): Observable<any> {
-  //   return this.http.get('https://jsonplaceholder.typicode.com/users/1');
-  // }
+  constructor(private http: HttpClient) {
+
+    this.baseUrl = 'https://jsonplaceholder.typicode.com/users/1';
+
+  }
+
+  /**
+   * Servicio para enviar el email de contacto
+   */
+  SendContactEmail(emailData: any): Observable<any> {
+
+    return this.http.post( this.baseUrl + '/.netlify/functions/contactForm', emailData);
+
+  }
 
 }
