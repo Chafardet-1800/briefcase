@@ -100,35 +100,35 @@ export class ContactFormComponent implements CmmComponentFormModel {
 
     if(!this.componentForm.valid) return;
 
-    // this.profileViewService.SendContactEmail(this.componentForm.value)
-    // .pipe(takeUntil(this.$unsubscribe))
-    // .subscribe({
-    //   next: (response) => {
+    this.profileViewService.SendContactEmail(this.componentForm.value)
+    .pipe(takeUntil(this.$unsubscribe))
+    .subscribe({
+      next: (response) => {
 
-    //     // Armamos la data de la alerta
-    //     const messagesData: CmmAlertModalModel = {
-    //       title: response.message,
-    //       text: '',
-    //       giftData: '',
-    //       typeIcon: 'success',
-    //       showCancelButton: false,
-    //       showConfirmButton: true,
-    //       cancelButtonText: '',
-    //       confirmButtonText: 'Aceptar',
-    //     }
+        // // Armamos la data de la alerta
+        // const messagesData: CmmAlertModalModel = {
+        //   title: response.message,
+        //   text: '',
+        //   giftData: '',
+        //   typeIcon: 'success',
+        //   showCancelButton: false,
+        //   showConfirmButton: true,
+        //   cancelButtonText: '',
+        //   confirmButtonText: 'Aceptar',
+        // }
 
-    //     // Abrimos el componente predeterminado con la data suministrada
-    //     this.snackbar.openFromComponent(CmmToastrComponent, {
-    //       horizontalPosition: 'right',
-    //       verticalPosition: 'top',
-    //       data: messagesData,
-    //       duration: 3000,
-    //       panelClass: ['alertPrincipalStyle'],
-    //     });
+        // // Abrimos el componente predeterminado con la data suministrada
+        // this.snackbar.openFromComponent(CmmToastrComponent, {
+        //   horizontalPosition: 'right',
+        //   verticalPosition: 'top',
+        //   data: messagesData,
+        //   duration: 3000,
+        //   panelClass: ['alertPrincipalStyle'],
+        // });
 
-    //   },
-    //   error: (err) => {console.log(err)}
-    // })
+      },
+      error: (err) => {console.log(err)}
+    })
 
   }
 
