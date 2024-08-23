@@ -15,7 +15,7 @@ export class ProfileViewService {
 
   constructor(private http: HttpClient) {
 
-    this.baseUrl = 'https://jsonplaceholder.typicode.com/users/1';
+    this.baseUrl = 'https://anibal-chafardet.netlify.app';
 
   }
 
