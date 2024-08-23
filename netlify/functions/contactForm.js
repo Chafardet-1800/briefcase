@@ -1,61 +1,106 @@
-// const { config } = require("dotenv");
-// const nodemailer = require("nodemailer");
-// config();
+const { config } = require("dotenv");
+const nodemailer = require("nodemailer");
+config();
 
+/**
+ * Transporte del mensaje configurado con los datos para el envio
+ */
+const transport = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+});
 
-// const transport = nodemailer.createTransport({
-//     host: process.env.EMAIL_HOST,
-//     port: 465,
-//     secure: true,
-//     auth: {
-//       user: process.env.EMAIL_USER,
-//       pass: process.env.EMAIL_PASSWORD,
-//     },
-// });
+/**
+ * Funcion para enviar el email
+ * @param {
+ *  from: string,
+ *  to: string,
+ *  subject: string,
+ *  text: string,
+ * } mail
+ * @returns
+ */
+function sendEmail(mail) {
 
+  // Creamos una promesa del envio
+  return new Promise((resolve, reject) => {
 
-// function enviarMail(mail) {
-//   return new Promise((resolve, reject) => {
-//     transport.sendMail(mail,
-//       (error, _) => {
-//         error
-//           ? reject({
-//               statusCode: 500,
-//               body: error,
-//             })
-//           : resolve({
-//               statusCode: 200,
-//               body: "Email enviado con éxito a " + mail.to,
-//             });
-//       }
-//     );
-//   });
-// }
+    // Enviamos el email
+    transport.sendMail(mail,
+      (error, _) => {
 
-// function generarCuerpoMensaje(params) {
-// return `Formulario de contacto enviado por ${params.nombre} - ${params.email}.
-// El mensaje es el siguiente:
-// ${params.mensaje}
-// `;
-//   }
+        // evaluamos el resultado
+        error
+
+        // En caso de error retornamos el error
+        ? reject({
+            statusCode: 500,
+            body: error,
+          })
+
+        // En caso de exito retornamos el exito
+        : resolve({
+            statusCode: 200,
+            body: "Email enviado con éxito a " + mail.to,
+          });
+
+      }
+    );
+
+  });
+}
+
+/**
+ * Funcion para dar el formato correcto al mensaje
+ * @param {
+ *  from: string,
+ *  to: string,
+ *  subject: string,
+ *  text: string,
+ * } mail
+ * @returns
+ */
+function formatMessage(mail) {
+return `
+Formulario de contacto enviado por ${mail.name} - ${mail.email}.
+
+El mensaje es el siguiente:
+${mail.message}
+`;
+}
 
 exports.handler = async (event, context)=> {
-  console.log("EVENT",event)
-    switch(event.httpMethod){
-        case "POST":
-            const params = JSON.parse(event.body);
-            console.log("RECIBÍ UNA SOLICITUD",params)
-            // return await enviarMail({
-            //     from: process.env.EMAIL_USER,
-            //     to: "contacto@puntojson.com",
-            //     subject: "CONTACTO - " + params.asunto,
-            //     text: generarCuerpoMensaje(params),
-            // });
-            return;
-        default:
-            return{
-                statusCode: 405,
-                message: "Método no soportado"
-            }
-    }
+  switch(event.httpMethod){
+    // En caso de que sea un metodo post, que es el correcto
+    case "POST":
+
+      // Obtenemos los parametros de la petición
+      const params = JSON.parse(event.body);
+
+      // Indicamos lo recivido
+      console.log("RECIBÍ UNA SOLICITUD",params)
+
+      // Enviamos el email y retornamos el resultado
+      return await sendEmail({
+          from: process.env.EMAIL_USER,
+          to: process.env.EMAIL_PASSWORD,
+          subject: "CONTACTO - " + params.affair,
+          text: formatMessage(params),
+      });
+
+    // En caso de que sea un metodo no soportado
+    default:
+
+      // Retornamos el error
+      return{
+          statusCode: 405,
+          message: "Método no soportado"
+      }
+
+  }
 }

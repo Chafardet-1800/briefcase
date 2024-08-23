@@ -1,6 +1,6 @@
 {
   "name": "briefcase",
-  "version": "0.0.010",
+  "version": "0.0.011",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,8 +22,10 @@
     "@angular/router": "^16.2.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
+    "nodemailer": "^6.9.14",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
