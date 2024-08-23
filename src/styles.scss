@@ -14,3 +14,18 @@ body{
   background-color: $v-background-page;
   padding-top: 100vh;
 }
+
+div.mat-mdc-select-panel {
+  background-color: $v-background-page !important;
+  border-radius: $dynamic_border_radius !important;
+  border: 1px solid $v-light-white !important;
+  padding: 0px !important;
+
+  .mat-mdc-option:focus .mdc-list-item,
+  .mat-mdc-option.mat-mdc-option-active.mdc-list-item {
+    background-color: $v-primary !important;
+  }
+  .mat-mdc-option {
+    background-color: $v-background-page !important;
+  }
+}

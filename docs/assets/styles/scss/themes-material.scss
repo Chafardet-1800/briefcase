@@ -1,0 +1,134 @@
+@use '@angular/material' as mat;
+@import "../../styles/scss/variables.scss";
+
+//*Seteo este color como una variable para que pueda ser seteado de forma dinámica
+$dynamic_primary: var(--v-dynamic-primary);
+
+@include mat.core();
+
+/* Paleta de colores de anibal modo claro */
+$custom-palette: (
+    50 : #efe9f6,
+    100 : #d8c7e9,
+    200 : #bea2db,
+    300 : #a37ccd,
+    400 : #9060c2,
+    500 : #7c44b7,
+    600 : #743eb0,
+    700 : #6935a7,
+    800 : #5f2d9f,
+    900 : #4c1f90,
+    A100 : #decbff,
+    A200 : #be98ff,
+    A400 : #9e65ff,
+    A700 : #8e4cff,
+    contrast: (
+        50 : #fff,
+        100 : #fff,
+        200 : #fff,
+        300 : #fff,
+        400 : #fff,
+        500 : #fff,
+        600 : #fff,
+        700 : $dynamic_primary,
+        800 : #fff,
+        900 : #fff,
+        A100 : #fff,
+        A200 : #fff,
+        A400 : #fff,
+        A700 : #fff,
+    )
+);
+
+// Indicamos como color pricipal el numero 500 de la paleta de colores claros de anibal
+$primary-theme: mat.define-palette($custom-palette, 500);
+
+// Indicamos como color secundario, usado para resaltar, los numeros A200, A100, A400 de la paleta de colores claros de anibal
+$accent-theme: mat.define-palette($custom-palette, A200, A100, A400);
+
+// Definimos el tema claro de anibal con los colores seleccionados
+$anibal-theme: mat.define-light-theme((
+ color: (
+   primary:$primary-theme,
+   accent: $accent-theme,
+   )
+));
+
+// Cambios en las variable de material
+:root {
+
+  // Clase de todos los inputs que tienen la clase outline
+  .mdc-text-field--outlined{
+
+    // Variable que define el radio del borde para los inputs de tipo outline
+    --mdc-outlined-text-field-container-shape:  #{$dynamic_border_radius};
+
+  }
+
+  // Clase de todos los contenedores tipo card de material
+  .mat-mdc-card{
+
+    // Variable que define el radio del borde para los contenedores tipo card de material
+    --mdc-elevated-card-container-shape:  #{$dynamic_border_radius};
+
+  }
+
+  // Clase de todos los contenedores tipo expancion-panel de material
+  .mat-expansion-panel{
+
+    // Variable que define el radio del borde para los contenedores tipo expancion-panel de material
+    --mat-expansion-container-shape:  #{$dynamic_border_radius};
+
+  }
+
+  // Clase de todos los dialogos tipo pop-up
+  .mat-mdc-dialog-container{
+
+    // Variable que define el radio del borde para los dialogos
+    --mdc-dialog-container-shape: #{$dynamic_border_radius};
+
+  }
+
+  // Clase de todos los dialogos tipo menu expandido
+  .mat-mdc-menu-panel{
+
+    // Variable que define el radio del borde para los dialogos
+    --mat-menu-container-shape: #{$dynamic_border_radius};
+
+  }
+
+  // Clase de todos los dialogos tipo snackbar
+  .mat-mdc-snack-bar-container{
+
+    // Variable que define el radio del borde para los dialogos
+    --mdc-snackbar-container-shape: #{$dynamic_border_radius};
+
+  }
+
+  // Clase de todos los dialogos tipo tooltip
+  .mat-mdc-tooltip{
+
+    // Variable que define el radio del borde para los dialogos
+    --mdc-plain-tooltip-container-shape: #{$dynamic_border_radius};
+
+  }
+
+  // Variable que define el radio del borde para los botones
+  --mdc-text-button-container-shape: #{$dynamic_border_radios_button};
+
+  // Variable que define el radio del borde para los botones protegidos
+  --mdc-protected-button-container-shape: #{$dynamic_border_radios_button};
+
+  // Variable que define el radio del borde para la clase de bootstrap
+  --bs-border-radius: #{$dynamic_border_radius};
+
+}
+
+// Intengramos en el proyecto el tema claro de anibal
+@include mat.core-theme($anibal-theme);
+
+// Indicamos la densidad de los elementos en el proyecto
+@include mat.all-component-densities(0);
+
+// Indicamos el color base de todos los componente del proyecto como los colores de la paleta clara de anibal
+@include mat.all-component-colors($anibal-theme);

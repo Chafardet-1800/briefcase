@@ -64,6 +64,15 @@ $dynamic_border_radius: 10px;
   // Variable de color terciario
   --v-dynamic-tertiary: #2e5f9e;
 
+  // Variable que define el borde de los menus
+  --mdc-outlined-text-field-outline-color: #{$v-light-white};
+
+  // Variable que define el borde de los menus
+  --mdc-outlined-text-field-hover-outline-color: #{$v-primary-disabled};
+
+  // Variable que define el color de las letras en los inputs
+  --mdc-outlined-text-field-input-text-color: #{$v-light-white};
+
   // Variable que define el radio del borde para los botones
   --mdc-text-button-container-shape: #{$dynamic_border_radios_button};
 
@@ -74,6 +83,3 @@ $dynamic_border_radius: 10px;
   --bs-border-radius: #{$dynamic_border_radius};
 
 }
-
-// background: rgb(255,255,255);
-// background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(217,204,237,1) 75%, rgba(244,211,186,1) 100%);

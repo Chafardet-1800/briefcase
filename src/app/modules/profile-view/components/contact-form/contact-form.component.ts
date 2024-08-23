@@ -68,7 +68,7 @@ export class ContactFormComponent implements CmmComponentFormModel {
     this.componentForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
-      affair: [''],
+      affair: ['', Validators.required],
       message: ['', Validators.required],
     });
 
@@ -93,6 +93,8 @@ export class ContactFormComponent implements CmmComponentFormModel {
    * En el error ejecutamos CmmdataService.CmmSetApiError con el objeto de error del formulario
    */
   onSubmit(){
+
+    console.log(this.componentForm);
 
     this.componentForm.markAllAsTouched();
 

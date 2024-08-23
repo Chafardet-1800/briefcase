@@ -4,9 +4,17 @@
 
 @import "./variables.scss";
 
-// @import '~bootstrap/dist/css/bootstrap.min.css';
 *:not(.material-icons) {
   font-family: "poppins" !important;
+  font-weight: 500;
+  box-shadow: none !important;
+  color: $v-txt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  font-family: "montserrat" !important;
   font-weight: 600;
   box-shadow: none !important;
   color: $v-txt;
@@ -52,20 +60,6 @@ body {
   }
 }
 
-@media screen and (max-width: 925px) {
-  .gwd-reCAPTCHA_2 {
-    transform: scale(0.74);
-    transform-origin: 0 0;
-    padding-left: 0px;
-  }
-}
-
-@media screen and (min-width: 925px) {
-  .gwd-reCAPTCHA_2 {
-    transform: initial;
-  }
-}
-
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
@@ -75,26 +69,74 @@ body {
 }
 
 @font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
   font-family: "poppins";
-  src: url("../../fonts/poppins/poppins-Regular.ttf") format("truetype");
+  src: url("../../fonts/poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../../fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../../fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "poppins";
-  src: url("../../fonts/poppins/poppins-Bold.ttf") format("truetype");
+  src: url("../../fonts/poppins/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "poppins";
-  src: url("../../fonts/poppins/poppins-Black.ttf") format("truetype");
-  font-weight: 900;
+  src: url("../../fonts/poppins/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
 }
 
 @font-face {
   font-family: "poppins";
-  src: url("../../fonts/poppins/poppins-Light.ttf") format("truetype");
+  src: url("../../fonts/poppins/Poppins-Light.ttf") format("truetype");
   font-weight: lighter;
 }
 
