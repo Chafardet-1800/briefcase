@@ -1,6 +1,6 @@
 {
   "name": "briefcase",
-  "version": "0.0.011",
+  "version": "0.0.012",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

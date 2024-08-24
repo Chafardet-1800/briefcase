@@ -19,8 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MatSidenavModule,
     SharedModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([]),
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es' }
