@@ -105,6 +105,8 @@ export class ContactFormComponent implements CmmComponentFormModel {
     .subscribe({
       next: (response) => {
 
+        console.log(response);
+
         // // Armamos la data de la alerta
         // const messagesData: CmmAlertModalModel = {
         //   title: response.message,

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ContactForm } from '../models/contactForm.models';
 
 @Injectable({
   providedIn: 'root',
@@ -21,8 +22,9 @@ export class ProfileViewService {
 
   /**
    * Servicio para enviar el email de contacto
+   * @param emailData - Informacion del email
    */
-  SendContactEmail(emailData: any): Observable<any> {
+  SendContactEmail(emailData: ContactForm): Observable<any> {
 
     return this.http.post( this.baseUrl + '/.netlify/functions/contactForm', emailData);
 

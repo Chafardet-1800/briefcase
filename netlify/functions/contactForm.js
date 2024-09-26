@@ -99,7 +99,7 @@ exports.handler = async (event, context)=> {
       // Enviamos el email y retornamos el resultado
       return await sendEmail({
           from: process.env.EMAIL_USER,
-          to: process.env.EMAIL_PASSWORD,
+          to: process.env.EMAIL_USER,
           subject: "CONTACTO - " + params.affair,
           text: formatMessage(params),
       });
