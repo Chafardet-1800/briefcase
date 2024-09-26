@@ -88,7 +88,7 @@ exports.handler = async (event, context)=> {
           to: process.env.EMAIL_USER,
           subject: "CONTACTO - " + params.affair,
           text: formatMessage(params),
-      });
+      }).json();
 
     // En caso de que sea un metodo no soportado
     default:
