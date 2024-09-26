@@ -93,7 +93,7 @@ exports.handler = async (event, context)=> {
       console.log(response);
 
       // Retornamos el resultado
-      return response
+      return response.json();
 
     // En caso de que sea un metodo no soportado
     default:
