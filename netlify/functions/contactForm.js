@@ -46,7 +46,7 @@ function sendEmail(mail) {
         // En caso de exito retornamos el exito
         : resolve({
             statusCode: 200,
-            body: "Email enviado con éxito a " + mail.to,
+            body: JSON.parse("Email enviado con éxito a " + mail.to),
           });
 
       }
@@ -83,17 +83,12 @@ exports.handler = async (event, context)=> {
       const params = JSON.parse(event.body);
 
       // Enviamos el email y retornamos el resultado
-      const response = await sendEmail({
+      return await sendEmail({
           from: process.env.EMAIL_USER,
           to: process.env.EMAIL_USER,
           subject: "CONTACTO - " + params.affair,
           text: formatMessage(params),
       });
-
-      console.log(response);
-
-      // Retornamos el resultado
-      return response.json();
 
     // En caso de que sea un metodo no soportado
     default:
