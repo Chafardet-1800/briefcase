@@ -51,6 +51,7 @@ p {
 .btn-primary {
   background-color: $v-primary !important;
   color: $v-white !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-primary-selected !important;
@@ -61,6 +62,7 @@ p {
   background-color: $v-white !important;
   color: $v-primary !important;
   border: 2px solid $v-primary !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-primary !important;
@@ -77,6 +79,7 @@ p {
 .btn-secondary {
   background-color: $v-secondary !important;
   color: $v-white !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-secondary-selected !important;
@@ -87,6 +90,7 @@ p {
   background-color: $v-white;
   color: $v-secondary;
   border: 2px solid $v-secondary;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-secondary;
@@ -163,6 +167,7 @@ p {
 .btn-success {
   background-color: $v-success;
   color: $v-white;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-primary-selected;
@@ -178,6 +183,7 @@ p {
   background-color: $v-white !important;
   color: $v-error !important;
   border: 2px solid $v-error !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-error !important;
@@ -194,6 +200,7 @@ p {
   background-color: $v-white !important;
   color: $v-warning !important;
   border: 2px solid $v-warning !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-warning !important;
@@ -236,6 +243,7 @@ p {
   background-color: $v-white !important;
   color: $v-medium-gray !important;
   border: 2px solid $v-medium-gray !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $v-medium-gray !important;
@@ -247,6 +255,7 @@ p {
   background-color: $v-white !important;
   color: var(--v-dynamic-primary) !important;
   border: 2px solid var(--v-dynamic-primary) !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: var(--v-dynamic-primary) !important;
@@ -258,6 +267,7 @@ p {
   background-color: $v-white !important;
   color: var(--v-dynamic-secundary) !important;
   border: 2px solid var(--v-dynamic-secundary) !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: var(--v-dynamic-secundary) !important;
@@ -269,6 +279,7 @@ p {
   background-color: $v-white !important;
   color: var(--v-dynamic-tertiary) !important;
   border: 2px solid var(--v-dynamic-tertiary) !important;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: var(--v-dynamic-tertiary) !important;
