@@ -46,7 +46,7 @@ function sendEmail(mail) {
         // En caso de exito retornamos el exito
         : resolve({
             statusCode: 200,
-            body: JSON.parse("Email enviado con éxito a " + mail.to),
+            body: JSON.stringify("Email enviado con éxito a " + mail.to),
           });
 
       }
