@@ -95,7 +95,7 @@ export class ContactFormComponent implements CmmComponentFormModel {
     .subscribe({
       next: (response) => {
 
-        console.log(response);
+        console.log('Respuesta:', response);
 
         // // Armamos la data de la alerta
         // const messagesData: CmmAlertModalModel = {
@@ -119,7 +119,7 @@ export class ContactFormComponent implements CmmComponentFormModel {
         // });
 
       },
-      error: (err) => {console.log(err)}
+      error: (err) => {console.log('Error:',err)}
     })
 
   }
