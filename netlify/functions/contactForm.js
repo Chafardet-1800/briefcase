@@ -83,18 +83,23 @@ exports.handler = async (event, context)=> {
       const params = JSON.parse(event.body);
 
       // Enviamos el email y retornamos el resultado
-      return await sendEmail({
+      const response = await sendEmail({
           from: process.env.EMAIL_USER,
           to: process.env.EMAIL_USER,
           subject: "CONTACTO - " + params.affair,
           text: formatMessage(params),
-      }).json();
+      });
+
+      console.log(response);
+
+      // Retornamos el resultado
+      return response
 
     // En caso de que sea un metodo no soportado
     default:
 
       // Retornamos el error
-      return{
+      return {
           statusCode: 405,
           message: "Método no soportado"
       }
