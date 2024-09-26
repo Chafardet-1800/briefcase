@@ -78,14 +78,6 @@ export class ContactFormComponent implements CmmComponentFormModel {
    * Aquí nos suscribimos a los cambios del form
    */
   listenFormChanges(){
-
-    this.componentForm.valueChanges.subscribe( (value: any) => {
-
-      console.log(value);
-
-    })
-
-
   };
 
   /**
@@ -93,8 +85,6 @@ export class ContactFormComponent implements CmmComponentFormModel {
    * En el error ejecutamos CmmdataService.CmmSetApiError con el objeto de error del formulario
    */
   onSubmit(){
-
-    console.log(this.componentForm);
 
     this.componentForm.markAllAsTouched();
 
