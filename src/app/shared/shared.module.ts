@@ -15,7 +15,9 @@ import { CmmToastrComponent } from './components/dialogs/toastr/toastr.component
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu'
 import { CmmButtonComponent } from './components/buttons/button/button.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -39,6 +41,8 @@ import { CmmButtonComponent } from './components/buttons/button/button.component
     MatIconModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatMenuModule,
+    MatButtonModule,
     FormsModule
   ],
   exports: [

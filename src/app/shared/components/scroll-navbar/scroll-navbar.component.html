@@ -1,38 +1,35 @@
-<nav id="sticky-parallax-header">
+<nav id="sticky-parallax-header" class="w-100 d-none d-lg-flex">
 
-  <!-- Contenedor que limita el tamaño del encabezado -->
-  <div class="d-flex position-relative ">
+  <div class="position-absolute background-image" style="top: 0; bottom: 0; opacity: 0.5; width: 105%;"></div>
 
-    <!-- Listado -->
-    <div class="row my-auto">
+  <!-- Listado -->
+  <div class="d-flex flex-wrap my-auto w-100">
 
-      <!-- Nombre, titulo y skills -->
-      <div class="d-flex flex-column col-12 col-md-6 px-3">
+    <!-- Nombre, titulo y skills -->
+    <div class="d-flex flex-column justify-content-center col-md-6 px-3">
 
-        <!-- Nombre -->
-        <p class="title-name m-0">Anibal A. Chafardet</p>
+      <!-- Nombre -->
+      <p class="title-name m-0">Anibal A. Chafardet</p>
 
-        <!-- Contenedor de la informacion -->
-        <div class="info-container overflow-hidden pe-4">
+      <!-- Contenedor de la informacion -->
+      <div class="info-container overflow-hidden pe-4">
 
-          <!-- Titulo -->
-          <p class="title-job">
-            Programador Frontend
+        <!-- Titulo -->
+        <p class="title-job">
+          Programador Frontend
+        </p>
+
+        <!-- Skills -->
+        <div class="d-flex flex-wrap skills-array">
+
+          <p class="col-12 fs-18">
+            Tecnologias que manejo:
           </p>
 
-          <!-- Skills -->
-          <div class="d-flex flex-wrap skills-array">
+          <div class="w-100 overflow-auto d-flex gap-3">
 
-            <p class="col-12 fs-18">
-              Tecnologias que manejo:
-            </p>
-
-            <div class="w-100 overflow-auto d-flex gap-3">
-
-              <img *ngFor="let skill of skillsArray" style="width: 100px;"
-              [src]="skill.imgurl" [alt]="skill.name" [matTooltip]="skill.name">
-
-            </div>
+            <img *ngFor="let skill of skillsArray" style="width: 70px;"
+            [src]="skill.imgurl" [alt]="skill.name" [matTooltip]="skill.name">
 
           </div>
 
@@ -40,29 +37,29 @@
 
       </div>
 
-      <!-- Descripcion y links -->
-      <div class="col-md-6 grid-options-container">
+    </div>
 
-        <!-- Contenedor de la descripcion -->
-        <div class="description d-flex align-items-center justify-content-center">
-          <p class="m-0 px-5 fs-20">
-            Se utilizar correctamente varias lenguajes de programacion y siempre estoy dispuesto a aprender mas. Tengo experiencia tanto en el desarrollo frontend como en el backend, aunque me he dedicado mas al primero. Entre al mundo de la programacion porque me gusta aprender cosas nuevas y en el codigo e descubierto que siempre hay algo nuevo que aprender.
-            <br>
-            <br>
-            Considero que no hay mejor forma para aprender que haciendo el codigo, por esto mismo me he desenpeñado en diversas areas y labores que, en mi opinion, me han dado una vista bastante amplia de lo que es la programacion y el desarrollo de productos digitales.
-          </p>
-        </div>
+    <!-- Descripcion y links -->
+    <div class="col-md-6 grid-options-container">
 
-        <!-- Contenedor de los links -->
-        <div class="links-container pt-4">
+      <!-- Contenedor de la descripcion -->
+      <div class="description d-flex align-items-center justify-content-center">
+        <p class="m-0 fs-16" style="max-width: 500px;">
+          Se utilizar correctamente varias lenguajes de programacion y siempre estoy dispuesto a aprender mas. Tengo experiencia tanto en el desarrollo frontend como en el backend, aunque me he dedicado mas al primero.
+          <br>
+          <br>
+          Considero que no hay mejor forma para aprender que haciendo el codigo, por esto mismo me he desenpeñado en diversas areas y labores que, en mi opinion, me han dado una vista bastante amplia de lo que es la programacion y el desarrollo de productos digitales.
+        </p>
+      </div>
 
-          <a href="#" class="link">Proyectos</a>
+      <!-- Contenedor de los links -->
+      <div class="links-container">
 
-          <a href="#" class="link">Experiencia</a>
+        <a href="#" class="link">Proyectos</a>
 
-          <a href="#" class="link">Contacto</a>
+        <a href="#" class="link">Experiencia</a>
 
-        </div>
+        <a href="#" class="link">Contacto</a>
 
       </div>
 
@@ -71,3 +68,67 @@
   </div>
 
 </nav>
+
+<nav class="w-100 d-flex d-lg-none justify-content-end p-3 cmm-bg-black" style="z-index: 1; position: fixed; top: 0;">
+
+  <button mat-button [matMenuTriggerFor]="beforeMenu">
+    <mat-icon class="cmm-txt m-0">menu</mat-icon>
+  </button>
+
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+
+    <div class=" d-flex flex-column px-3 gap-3">
+
+      <a href="#project-carrusell" class="link">Proyectos</a>
+
+      <a href="#timeline" class="link">Experiencia</a>
+
+      <a href="#contact-form" class="link">Contacto</a>
+
+    </div>
+
+  </mat-menu>
+
+</nav>
+
+<section class="w-100 d-flex d-lg-none flex-wrap my-auto pt-5 position-relative overflow-hidden">
+
+  <div class="position-absolute background-image" style="top: 0; bottom: 0; opacity: 0.4; width: 200%;"></div>
+
+  <!-- Nombre, titulo y skills -->
+  <div class="d-flex flex-column justify-content-center col-12 px-3 mb-4 position-relative">
+
+    <!-- Nombre -->
+    <p class="fs-26 text-center m-0">Anibal A. Chafardet</p>
+
+    <!-- Contenedor de la informacion -->
+    <div class="overflow-hidden pe-4">
+
+      <!-- Titulo -->
+      <p class="fs-18 text-center mb-4">
+        Programador Frontend
+      </p>
+
+      <!-- Skills -->
+      <div class="w-100 overflow-auto d-flex gap-3">
+
+        <img *ngFor="let skill of skillsArray" style="width: 100px;"
+        [src]="skill.imgurl" [alt]="skill.name" [matTooltip]="skill.name">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Contenedor de la descripcion -->
+  <div class="d-flex align-items-center justify-content-center p-3 position-relative">
+    <p class="m-0 fs-20 text-center">
+      Se utilizar correctamente varias lenguajes de programacion y siempre estoy dispuesto a aprender mas. Tengo experiencia tanto en el desarrollo frontend como en el backend, aunque me he dedicado mas al primero.
+      <br>
+      <br>
+      Considero que no hay mejor forma para aprender que haciendo el codigo, por esto mismo me he desenpeñado en diversas areas y labores que, en mi opinion, me han dado una vista bastante amplia de lo que es la programacion y el desarrollo de productos digitales.
+    </p>
+  </div>
+
+</section>

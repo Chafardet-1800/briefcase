@@ -12,7 +12,14 @@ html{
 
 body{
   background-color: $v-background-page;
-  padding-top: 100vh;
+  padding-top: 45px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 100vh;
+  }
 }
 
 div.mat-mdc-select-panel {

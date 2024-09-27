@@ -15,16 +15,12 @@
 // Animacion para el titulo
 @keyframes title-move {
   from {
-    transform: translateX(-50%);
-    left: 50%;
-    font-size: 4rem;
+    font-size: 2.3rem;
   }
 
   to {
-    transform: translateX(0%);
-    left: 0%;
     font-size: 2rem;
-    padding: 1.5rem;
+    padding-bottom: 3.5rem;
   }
 }
 
@@ -60,7 +56,7 @@
   }
 
   to {
-    transform: translate(0px, 0%);
+    transform: translate(0px, -315%);
     opacity: 1;
   }
 }
@@ -81,11 +77,15 @@
   display: grid;
   place-items: center;
   text-align: start;
+  z-index: 101;
+}
+
+// Contenedor principal (nav)
+.background-image {
   background-image: url('../../../../assets/images/media/fondo_lineas.svg');
   background-size: cover;
   background-position: 50% 50%;
   background-blend-mode: soft-light;
-  z-index: 100;
 }
 
 // Titulo
@@ -104,26 +104,16 @@
   animation-range: 0vh 90vh;
 }
 
-.title-job {
-  font-size: 2rem;
-  width: fit-content;
-  position: relative;
-  transform: translateX(-82%);
-  left: 50%;
-}
-
-.skills-array {
-  position: relative;
-  transform: translateX(-32%);
-  left: 50%;
-}
-
 // Contendero de la descripcion y los links
 .grid-options-container {
 
   position: relative;
   overflow: hidden;
   display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 
   // Estilos comunes para los contenedores
   div {
@@ -152,11 +142,10 @@ div.links-container {
 
 .link {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   box-shadow: inset 0 0 0 0 $v-primary !important;
   color: $v-primary;
-  padding: 0 .25rem;
-  margin: 0 2rem;
+  margin: 0 1rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
