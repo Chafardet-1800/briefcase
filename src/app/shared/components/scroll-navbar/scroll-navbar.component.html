@@ -6,16 +6,16 @@
   <div class="d-flex flex-wrap my-auto w-100">
 
     <!-- Nombre, titulo y skills -->
-    <div class="d-flex flex-column justify-content-center col-md-6 px-3">
+    <div class="d-flex flex-column justify-content-center col-md-6 px-5 mx-auto" style="max-width: 650px;">
 
       <!-- Nombre -->
       <p class="title-name m-0">Anibal A. Chafardet</p>
 
       <!-- Contenedor de la informacion -->
-      <div class="info-container overflow-hidden pe-4">
+      <div class="info-container overflow-hidden pe-2">
 
         <!-- Titulo -->
-        <p class="title-job">
+        <p class="title-job fs-24">
           Programador Frontend
         </p>
 
@@ -26,7 +26,7 @@
             Tecnologias que manejo:
           </p>
 
-          <div class="w-100 overflow-auto d-flex gap-3">
+          <div class="w-100 overflow-auto d-flex gap-3 hiddeScrollBar">
 
             <img *ngFor="let skill of skillsArray" style="width: 70px;"
             [src]="skill.imgurl" [alt]="skill.name" [matTooltip]="skill.name">
@@ -55,11 +55,11 @@
       <!-- Contenedor de los links -->
       <div class="links-container">
 
-        <a href="#" class="link">Proyectos</a>
+        <a href="#project-carrusell" class="link">Proyectos</a>
 
-        <a href="#" class="link">Experiencia</a>
+        <a href="#timeline" class="link">Experiencia</a>
 
-        <a href="#" class="link">Contacto</a>
+        <a href="#contact-form" class="link">Contacto</a>
 
       </div>
 
@@ -69,9 +69,9 @@
 
 </nav>
 
-<nav class="w-100 d-flex d-lg-none justify-content-end p-3 cmm-bg-black" style="z-index: 1; position: fixed; top: 0;">
+<nav class="w-100 d-flex d-lg-none justify-content-end p-3 cmm-bg-black" style="z-index: 101; position: fixed; top: 0;">
 
-  <button mat-button [matMenuTriggerFor]="beforeMenu">
+  <button mat-button [matMenuTriggerFor]="beforeMenu" class="p-0">
     <mat-icon class="cmm-txt m-0">menu</mat-icon>
   </button>
 

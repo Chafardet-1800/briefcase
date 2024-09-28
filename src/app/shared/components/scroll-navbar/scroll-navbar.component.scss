@@ -20,7 +20,7 @@
 
   to {
     font-size: 2rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -56,7 +56,7 @@
   }
 
   to {
-    transform: translate(0px, -315%);
+    transform: translate(0px, -270%);
     opacity: 1;
   }
 }
@@ -86,6 +86,10 @@
   background-size: cover;
   background-position: 50% 50%;
   background-blend-mode: soft-light;
+
+  animation: nav-opened-move linear forwards;
+  animation-timeline: scroll(root);
+  animation-range: 0vh 90vh;
 }
 
 // Titulo

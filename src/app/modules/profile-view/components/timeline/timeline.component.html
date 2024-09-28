@@ -1,31 +1,45 @@
-<section class="d-flex flex-wrap w-100 p-3">
+<section class="d-flex flex-wrap w-100 px-4" style="padding: 120px 0;">
+
+  <!-- Asunto -->
+  <cmm-cmp-i-select class="col-12 px-2 d-lg-none timelineSelect mb-4" [formControl]="componentInput"
+  selectMode="select" label="" placeholder="" [optionsList]="timelineList" optionKey="id"
+  optionName="date" (inputChange)="changeTimeline()"></cmm-cmp-i-select>
 
   <!-- Linea de tiempo -->
-  <div class="w-100 d-flex justify-content-between position-relative my-3">
+  <div class="w-100 d-none d-lg-flex justify-content-between align-items-center position-relative mt-3 mb-5">
 
-    <div class="cmm-bg-primary position-absolute w-100" style="height: 3px; top: 50%; transform: translateY(-50%);"></div>
+    <div class="cmm-bg-primary position-absolute w-100 px-2" style="height: 3px; top: 50%; transform: translateY(-50%);"></div>
 
-    <div *ngFor="let timeline of timelineList" (click)="timelineSelected = timeline">
-      <p class="m-0 cmm-bg-black position-relative px-2">{{timeline.date}}</p>
+    <div *ngFor="let timeline of timelineList" (click)="timelineSelected = timeline"
+    [ngClass]="{'date-button-selected cmm-bg-primary p-2 rounded': timelineSelected == timeline}">
+
+      <p class="m-0 position-relative px-2 fs-18" [ngClass]="{'cmm-bg-black': timelineSelected !== timeline}">
+        {{timeline.date}}
+      </p>
+
     </div>
 
   </div>
 
   <!-- Nombre de la empresa y cargo ocupado -->
-  <div class="col-12 col-lg-6 d-flex flex-column">
+  <div class="col-12 col-lg-6">
 
-    <!-- Nombre de la empresa -->
-    <p>{{timelineSelected.event}}</p>
+    <div class="d-flex flex-column mx-auto text-center text-lg-start" style="max-width: 450px;">
 
-    <!-- Cargo ocupado -->
-    <p>{{timelineSelected.subEvent}}</p>
+      <!-- Nombre de la empresa -->
+      <p class="fs-40">{{timelineSelected.event}}</p>
+
+      <!-- Cargo ocupado -->
+      <p class="fs-22">{{timelineSelected.subEvent}}</p>
+
+    </div>
 
   </div>
 
   <!-- Descripcion -->
   <div class="col-12 col-lg-6 d-flex flex-column">
 
-    <p>{{timelineSelected.description}}</p>
+    <p class="fs-18 text-center text-lg-start">{{timelineSelected.description}}</p>
 
   </div>
 
