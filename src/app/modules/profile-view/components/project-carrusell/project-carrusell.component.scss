@@ -1,5 +1,5 @@
 :host {
-  --cover-size: 15rem;
+  --cover-size: 25rem;
 }
 
 @media (max-width: 1024px) {
@@ -58,7 +58,7 @@
   white-space: nowrap;
   overflow: scroll;
 
-  --size: 6;
+  --size: 5;
   min-height: calc(var(--cover-size)* 2.5);
   width: calc(var(--cover-size)* var(--size));
   margin: 0 auto;
@@ -78,7 +78,7 @@
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.cards li {
+.cards a {
   display: inline-block;
   width: var(--cover-size);
   height: var(--cover-size);
@@ -106,17 +106,17 @@
 }
 
 /* Because the total size is 6, with 1 cover in the middle, there’s space for 5 left … so 2.5 on each side */
-.cards li:first-of-type {
+.cards a:first-of-type {
   margin-left: calc(50% - (var(--cover-size) / 2));
 }
-.cards li:last-of-type {
+.cards a:last-of-type {
   margin-right: calc(50% - (var(--cover-size) / 2));
 }
 
-.cards li>img {
+.cards a>img {
   display: block;
   width: var(--cover-size);
-  height: var(--cover-size);
+  height: calc(var(--cover-size) * 0.7);
 
 
   /* Link an animation to the established view-timeline (of the parent li) and have it run during the contain phase */

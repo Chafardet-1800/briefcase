@@ -60,3 +60,18 @@ export const backgroundLines =
 
 export const personalProfile =
   'assets/images/media/perfil_personal.svg';
+
+export const taskmanagerImg =
+  'assets/images/media/taskmanager.png';
+
+export const supermarketImg =
+  'assets/images/media/supermarket.png';
+
+export const meteorologistImg =
+  'assets/images/media/meteorologist.png';
+
+export const usermanagementImg =
+  'assets/images/media/usermanagement.png';
+
+export const movieappImg =
+  'assets/images/media/movieapp.png';
