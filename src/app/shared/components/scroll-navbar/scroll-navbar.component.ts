@@ -14,7 +14,7 @@ export class ScrollNavbarComponent {
   backgroundLines: string = backgroundLines;
 
   /**
-   * Arreglo de lenguajes de programacion
+   * Arreglo de lenguajes de programación
    */
   skillsArray: {
     name: string,

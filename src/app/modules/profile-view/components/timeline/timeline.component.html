@@ -10,7 +10,7 @@
 
     <div class="cmm-bg-primary position-absolute w-100 px-2" style="height: 3px; top: 50%; transform: translateY(-50%);"></div>
 
-    <div *ngFor="let timeline of timelineList" (click)="timelineSelected = timeline"
+    <div *ngFor="let timeline of timelineList" (click)="timelineSelected = timeline" class="cursor-pointer"
     [ngClass]="{'date-button-selected cmm-bg-primary p-2 rounded': timelineSelected == timeline}">
 
       <p class="m-0 position-relative px-2 fs-18" [ngClass]="{'cmm-bg-black': timelineSelected !== timeline}">

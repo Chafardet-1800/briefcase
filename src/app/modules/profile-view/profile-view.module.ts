@@ -8,6 +8,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from "../../shared/shared.module";
 import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -24,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     ProfileViewRountingModule,
     SharedModule,
     MatInputModule,
+    MatTooltipModule,
     FormsModule
   ]
 })

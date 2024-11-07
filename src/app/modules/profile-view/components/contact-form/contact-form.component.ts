@@ -40,9 +40,9 @@ export class ContactFormComponent implements CmmComponentFormModel {
    * Listado de opciones para los posibles asuntos
    */
   selectList: any[] = [
-    {value: "Asunto 1"},
-    {value: "Asunto 2"},
-    {value: "Asunto 3"},
+    {value: "Propuesta de trabajo"},
+    {value: "Iniciar un proyecto juntos"},
+    {value: "Hacer un encargo"},
   ]
 
 

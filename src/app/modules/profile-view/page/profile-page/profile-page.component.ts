@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ProfilePageComponent {
 
   /**
-   * Listado de lenguajes de programacion
+   * Listado de lenguajes de programación
    */
   skillsList: any[] = [
     {
